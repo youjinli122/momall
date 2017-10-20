@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="runenv" content="cao">
+    <meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+
+    <title>美宅科技-智购宝</title> 
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+      <link rel="stylesheet" href="css/my-app.css"> 
+    <link rel="stylesheet" href="css/fonts/iconfont.css">
+  
+    <link rel="stylesheet" href="css/swiper.min.css">   
+</head>
+<body>
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<div id="version" style="position:fixed; pointer-events:none;left:0; top:0; font-size:12px; z-index:65000; width:100%; height:200px;"></div>
+ 
+<div class="views"><div class="view view-main">
+  <div id="loading">
+                    222222
+                    222222
+                    222222
+                    222222
+        <!--  <div class="loadEffect">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div> -->
+       </div>
+    <div class="pages">
+<!-- FRAMEWORK7 PAGES BEGIN -->
+      
+      
+<!--##############     登录 login #p-login    #################-->
+      <div data-page="p-login" class="page cached" id="p-login">
+        <div class="page-content">
+          <div class="re">
+              <img class="login-bj" src="img/login-bj.png" />
+              <i class="iconfont icon-logo_fuzhi- login-logo"></i>
+          </div>
+          <form class="mt20 list-block" onsubmit="return false;">
+              <div class="line-div clearfix">
+                  <label for="i-login-mobile">帐号</label>
+                  <input id="i-login-mobile" class="textbox" type="text" name="mobile" placeholder="请输入用户名" value="dev"/>
+              </div>
+              <div class="line-div clearfix">
+                  <label for="i-login-password">密码</label>
+                  <input id="i-login-password" class="textbox" type="password" name="password" placeholder="请输入密码" value="123456"/>
+              </div>
+              <div class="line-text clearfix">
+                  <a href="#p-forget-password" class="c-6">忘记密码?</a>
+              </div>         
+              <div class="content-block">
+                <a class="button active submit-button" href="#">登录</a>
+              </div>
+        <div class="content-block mtb10">
+                <a class="button sub-button" href="#p-register">注册</a>
+              </div>
+          </form>
+        </div>
+      </div>
+      <!--##############     商城 #p-shop    #################-->
+
+      <div id="p-shop" data-page="p-shop" class="page cached">   
+
+                <!-- 导航栏 -->
+                <div class="navbar bgbox">
+                    <div class="navbar-inner" id="na">
+                      <div class="left sliding"><a href="#" class="link icon-only" id="js_oc"><i class="icon icon-back"><img class="i-back" src="img/back.png" alt="meizhai"></i></a></div>
+                      <div class="center">商城</div>
+                    </div>
+                </div>        
+              <!-- 页面内容开始-->
+               
+                  <div class="page-content">
+                     <div class="con-background"></div>
+                     <div class="main clearfix">
+                        <div class="mall_box borderradius boxshadow">
+                        <!-- 搜索 框-->
+                          <form class="searchbar">
+                            <div class="searchbar-input">
+                                <input type="search" placeholder="Search">                          
+                            </div>
+                          </form>
+                          <!-- 搜索1 -->
+                          <div class="mall_select_box">
+                            <div class="mall_select_value">全部品牌</div>
+
+                            <div class="mall_select_list borderradius">
+                              <p class="title">品牌</p>
+                              <ul>
+                                <li>品牌1</li>
+                                <li>品牌1</li>
+                                <li>品牌1</li>
+                                <li>品牌1</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- 搜索2 -->
+                          <div class="mall_select_box">
+                            <div class="mall_select_value">全部品类</div>
+                            <div class="mall_select_list borderradius">
+                              <p class="title">品类</p>
+                              <ul class="borderradius">
+                                <li>品类一</li>
+                                <li>品类一</li>
+                                <li>品类一</li>
+                              </ul>
+                            </div>
+                          </div>
+                        <!-- 搜索3 -->
+                          <div class="mall_select_box">
+                            <div class="mall_select_value">全部风格</div>
+                            <div class="mall_select_list borderradius">
+                              <p class="title">风格</p>
+                              <ul class="borderradius">
+                                <li>风格一</li>
+                                <li>风格一</li>
+                                <li>风格一</li>
+                              </ul>
+                            </div>
+                          </div>
+                           <!-- 搜索4 -->
+                          <div class="mall_select_box">
+                            <div class="mall_select_value">月销量</div>
+                            <div class="mall_select_list borderradius">
+                              <p class="title">销量</p>
+                              <ul class="borderradius">
+                                <li>从高到低</li>
+                                <li>从低到高</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div> 
+                        <!-- 商品列表 -->
+                        <ul class="goodslist_box">
+                          <li class="goods boxshadow">
+                            <div class="goods_img"><a href="#p-commoditydetails" class="item-link item-content"><img src="img/lizi.png"></a></div>
+                            <div class="goodsword">【品牌】这里是品牌的简介品牌的简介</div>
+                            <div class="goodsword_foot">
+                              <div class="redword">¥999</div>
+                              <div class="graysmallword first_child">¥1999</div>
+                              <div class="graysmallword">月售6笔</div>
+                              <div class="addgoods cursor">
+                                <a href="#" title="加入购物车" class="baseBg Q-buy-btn" id="buy-s-1"></a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="goods boxshadow">
+                            <div class="goods_img"><a href="#p-commoditydetails" class="item-link item-content"><img src="img/lizi.png"></a></div>
+                            <div class="goodsword">【品牌】这里是品牌的简介品牌的简介</div>
+                            <div class="goodsword_foot">
+                              <div class="redword">¥999</div>
+                              <div class="graysmallword first_child">¥1999</div>
+                              <div class="graysmallword">月售6笔</div>
+                              <div class="addgoods cursor">
+                                <a href="#" title="加入购物车" class="baseBg Q-buy-btn" id="buy-s-1"></a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="goods boxshadow">
+                            <div class="goods_img"><a href="#p-commoditydetails" class="item-link item-content"><img src="img/lizi.png"></a></div>
+                            <div class="goodsword">【品牌】这里是品牌的简介品牌的简介</div>
+                            <div class="goodsword_foot">
+                              <div class="redword">¥999</div>
+                              <div class="graysmallword first_child">¥1999</div>
+                              <div class="graysmallword">月售6笔</div>
+                              <div class="addgoods cursor">
+                                <a href="#" title="加入购物车" class="baseBg Q-buy-btn" id="buy-s-1"></a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="goods boxshadow">
+                            <div class="goods_img"><a href="#p-commoditydetails" class="item-link item-content"><img src="img/lizi.png"></a></div>
+                            <div class="goodsword">【品牌】这里是品牌的简介品牌的简介</div>
+                            <div class="goodsword_foot">
+                              <div class="redword">¥999</div>
+                              <div class="graysmallword first_child">¥1999</div>
+                              <div class="graysmallword">月售6笔</div>
+                              <div class="addgoods cursor">
+                                <a href="#" title="加入购物车" class="baseBg Q-buy-btn" id="buy-s-1"></a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="goods boxshadow">
+                            <div class="goods_img"><a href="#p-commoditydetails" class="item-link item-content"><img src="img/lizi.png"></a></div>
+                            <div class="goodsword">【品牌】这里是品牌的简介品牌的简介</div>
+                            <div class="goodsword_foot">
+                              <div class="redword">¥999</div>
+                              <div class="graysmallword first_child">¥1999</div>
+                              <div class="graysmallword">月售6笔</div>
+                              <div class="addgoods cursor">
+                                <a href="#" title="加入购物车" class="baseBg Q-buy-btn" id="buy-s-1"></a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="goods boxshadow">
+                            <div class="goods_img"><a href="#p-commoditydetails" class="item-link item-content"><img src="img/lizi.png"></a></div>
+                            <div class="goodsword">【品牌】这里是品牌的简介品牌的简介</div>
+                            <div class="goodsword_foot">
+                              <div class="redword">¥999</div>
+                              <div class="graysmallword first_child">¥1999</div>
+                              <div class="graysmallword">月售6笔</div>
+                              <div class="addgoods cursor">
+                                <a href="#" title="加入购物车" class="baseBg Q-buy-btn" id="buy-s-1"></a>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                  </div>
+            
+  
+       <!--##############    详情页    #################-->
+      <div id="p-commoditydetails" data-page="p-commoditydetails" class="page navbar-through cached">    
+            <div class="navbar bgbox">
+              <div class="navbar-inner">
+                <div class="left sliding"><a href="#p-shop" class="link icon-only"><i class="icon icon-back"><img class="i-back" src="img/back.png" alt="meizhai"></i></a></div>
+                <div class="sliding title_name_color">商品详情</div>
+                <div class="right"><a href="#" class="link icon-only open-panel"></a></div>
+              </div>
+            </div>
+            <div class="page-content page-color">
+              <div class="swiper-container index_banner">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="img/lizi1.png"/></div>
+                      <div class="swiper-slide"><img src="img/lizi1.png"/></div>
+                      <div class="swiper-slide"><img src="img/lizi1.png"/></div>
+                      <div class="swiper-slide"><img src="img/lizi1.png"/></div>
+                  </div>
+                  <div class="pagination goods_banner_list_point"></div>
+                  <div class="shareflag"><img src="img/indexshare.png"></div>
+              </div>
+
+              <div class="goods_details_title bgbox">
+                  <p class="priceone">¥999</p>
+                  <p class="pricetwo"><u>¥1999</u><u>月售8笔</u></p>
+                  <p class="codebtn_box"><img src="img/writecodeflag.png"></p>
+                  <p class="Dbtn_box"><img src="img/3d.png"></p>
+              </div>
+              <div class="goods_details">
+                <div class="goods_details_top">
+                  <p class="goods_details_top_left">
+                    <span>【顾家沙发】</span>这里是沙发的简介这里是沙发的简介
+                  </p>
+                  <p class="goods_details_top_right">
+                    <img src="img/add.png">
+                  </p>
+                </div>
+                <div class="goods_details_con">
+                      这里是沙发的简介这里是沙发的简介这里是沙发的简介这里是沙发的简介这里是沙发的简介这里是沙发的简介这里是沙发的简介这里是沙发的简介这里是沙发的简介这里是沙发的简介
+                </div>
+              </div>
+            </div>
+            <div class="toolbar clearfix J-shoping">
+                  <div class="toolbar-inner">
+                    <p class="shop_foot_left redword">合计（3）：¥6999</p>
+                    <p class="shop_foot_right bgcolor cursor">
+                      <a href="#" class="item-link item-content whitewordcolor">查看意向商品</a>
+                    </p>
+                  </div>
+                  <div class="addcart J-shoping-num">0</div>
+            </div>
+        </div>
+
+       <!--##############     end    #################-->   
+ 
+                <!-- 页面内容结束 -->               
+                <!-- 尾部 -->
+                <div class="toolbar clearfix J-shoping">
+                  <div class="toolbar-inner">
+                    <p class="shop_foot_left redword">合计（3）：¥6999</p>
+                    <p class="shop_foot_right bgcolor cursor">
+                      <a href="#" class="item-link item-content whitewordcolor">查看意向商品</a>
+                    </p>
+                  </div>
+                  <div class="addcart J-shoping-num">0</div>
+                </div>
+      </div>
+
+
+
+
+      <!--##############     收款 #p-index    #################-->
+      <div id="p-index" data-page="p-index" class="page cached navbar-through toolbar-through">
+        <div class="navbar theme-white">
+          <div class="navbar-inner">
+            <div class="center">收款</div>
+            <div class="right">
+                <a href="#p-fuwutishi"><i class="iconfont icon-fuwutishi_fuzhi-"></i></a>
+                <a id="btn-scan" href="#" class="link"><span>扫一扫</span><i class="iconfont icon-saoyisao_fuzhi-"></i></a>
+            </div>
+          </div>
+        </div>
+        <div id="collection" class="page-content">
+          <div class="scan-money bpack white">
+            <div class="money-text"><i class="iconfont icon-qian_fuzhi-"></i><span id="total-money" class="total-money">0.00</span></div>
+          </div>
+          <ul class="scan-cale white clearfix">
+            <li class="num link">1</li>
+            <li class="num">2</li>
+            <li class="num">3</li>
+            <li class="num">4</li>
+            <li class="num">5</li>
+            <li class="num">6</li>
+            <li class="num">7</li>
+            <li class="num">8</li>
+            <li class="num">9</li>
+            <li class="dot"></li>
+            <li class="num">0</li>
+            <li class="del">退格</li>
+          </ul>
+          <div class="content-block buttons-row m0">
+            <a href="#" class="button button-fill weixin">微信</a>
+            <a href="#" class="button button-fill alipay">支付宝</a>
+            <a href="#" class="button button-fill qqpay">QQ钱包</a>
+            <!-- <a href="#" class="button button-fill jdpay">京东</a> -->
+          </div>
+        </div>
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+             
+              <a href="#p-index" class="active no-animation"><i class="iconfont icon-shoukuan_fuzhi-"></i><span class="tabbar-label">收款</span></a>
+              
+              <!-- <a href="#p-news" class="no-animation"><i class="iconfont icon-xiaoxi_fuzhi-"></i><span class="tabbar-label">消息</span></a> -->
+              <a href="#p-statistics" class="no-animation"><i class="iconfont icon-dingdanguanli_fuzhi- re"><span class="orderTips mystat">1</span></i><span class="tabbar-label">订单</span></a>
+              <a href="#p-myInfo" class="no-animation"><i class="iconfont icon-wode_fuzhi-"></i><span class="tabbar-label">我</span></a>
+              <a href="#p-shop" class="no-animation"><i class="icon-qian_fuzhi-"></i><span class="tabbar-label">商城</span></a>
+          </div>
+        </div>
+      </div>
+
+
+     
+      <!--##############     我的 #p-myInfo    #################-->
+      <div id="p-myInfo" data-page="p-myInfo" class="page cached navbar-through toolbar-through">
+        <div class="navbar theme-white">
+          <div class="navbar-inner">
+            <div class="center">我的</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="list-block myInfo-list-block">
+            <ul>
+              <li>
+                  <div class="item-content">
+                    <!-- <div class="item-media"><a href="#p-replace-photo"><img class="pic" src="img/my-pic.gif"></a></div> -->
+                    <div class="item-media"><img class="pic" src="img/logo.png"></div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        <div class="sub-title">商户号 6288888888666</div>
+                        <div class="title">北京物联银汇科技有限公司</div>
+                      </div>                          
+                    </div>
+                  </div>
+              </li>
+            </ul>
+          </div>
+          <div class="list-block mtb20">
+            <ul>              
+              <!-- <li>
+                     <a href="#p-merchant-info" class="item-link item-content">
+                       <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-2 fl"></i></div>
+                       <div class="item-inner">
+                         <div class="item-title">商户资料</div>
+                       </div>
+                     </a>
+                 </li> -->   
+              <li class="isAuditInfo">
+                  <a href="#p-audit-store" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-7 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">商户资料</div>       
+                      <div class="item-after" style="display:none;">未审核</div>               
+                    </div>
+                  </a>
+              </li>   
+              <li class="isCard">
+                  <a href="#p-bind-card" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-7 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">绑定银行卡</div> 
+                      <div class="item-after" style="display:none;">绑定成功</div>                     
+                    </div>
+                  </a>
+              </li>          
+              <li>
+                  <a href="#p-gudingCode" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-4 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">固定收款二维码</div>
+                    </div>
+                  </a>
+              </li>              
+            </ul>
+          </div> 
+          <div class="list-block mtb20">
+            <ul> 
+              <li>
+                  <a href="#p-quanxian-manage" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-6 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">权限管理</div>
+                    </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#p-staff-manage" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-6 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">员工管理</div>
+                    </div>
+                  </a>
+              </li>  
+              <li>
+                  <a href="#p-pass-anquan" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-3 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">密码安全</div>
+                    </div>
+                  </a>
+              </li>  
+            </ul>
+          </div> 
+          <div class="list-block mtb20">
+            <!-- <ul>                        
+              <li>
+                  <a href="#p-flow-ranking" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-5 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">流水排名</div>
+                    </div>
+                  </a>
+              </li>
+              <li>
+                  <a href="#p-faq" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-8 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">常见问题</div>
+                    </div>
+                  </a>
+              </li>                  
+              <li>
+                  <a href="#p-setting" class="item-link item-content">
+                    <div class="item-media"><i class="iconfont icon-weibiaoti-_fuzhi-7 fl"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">设置</div>
+                    </div>
+                  </a>
+              </li>
+            </ul> -->
+            <p>
+              <a href="#" class="button active mylogout">安全退出</a>
+            </p>
+          </div>
+        </div>
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+              
+              <a href="#p-index" class="no-animation"><i class="iconfont icon-shoukuan_fuzhi-"></i><span class="tabbar-label">收款</span></a>
+              <!-- <a href="#p-news" class="no-animation"><i class="iconfont icon-xiaoxi_fuzhi-"></i><span class="tabbar-label">消息</span></a> -->
+              <a href="#p-statistics" class="no-animation"><i class="iconfont icon-dingdanguanli_fuzhi- re"><span class="orderTips mystat">2</span></i><span class="tabbar-label">订单</span></a>
+              <a href="#p-myInfo" class="active no-animation"><i class="iconfont icon-wode_fuzhi-"></i><span class="tabbar-label">我</span></a>
+              <a href="#p-shop" class="no-animation"><i class="icon-qian_fuzhi-"></i><span class="tabbar-label">商城</span></a>
+          </div>
+        </div>
+      </div>
+     
+
+<!-- FRAMEWORK7 PAGES END -->
+</div></div></div>
+<img id="icon-yhlogo" src="img/yhlogo-big.png" width="100" height="100" border="0" alt="" style="display:none;">
+<!-- 框架 -->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<!-- 插件 -->
+<!-- <script type="text/javascript" src="js/jquery-qrcode-0.14.0.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/JsBarcode.all.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/echarts.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/html2canvas.js"></script>
+<!-- 移动接口 -->
+<!-- <script type="text/javascript" src="cordova.js"></script> -->
+<!-- <script type="text/javascript" src="js/pay.cordova.js"></script> -->
+<!-- 项目 -->
+<script type="text/javascript" src="js/stomp.js"></script>
+<!-- <script type="text/javascript" src="js/pay.env.js"></script> -->
+<script type="text/javascript" src="js/jQuery-shopping.js"></script>
+<script type="text/javascript" src="js/jsoc.js"></script>
+<script type="text/javascript" src="js/pay.base.js"></script>
+<script type="text/javascript" src="js/pay.main.js"></script>
+<script type="text/javascript" src="js/pay.app.js"></script>
+<!-- <script type="text/javascript" src="js/dict_china.json"></script> -->
+<!-- <script type="text/javascript" src="js/dict_category.json"></script> -->
+<!-- <script type="text/javascript" src="js/pay.app.stat.js"></script> -->
+
+</body>
+</html>

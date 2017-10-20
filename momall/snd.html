@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  
+
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+<script type="text/javascript">
+<!--
+var _TR = console.log;
+
+	function voiceNumber(number){
+		if(!voiceNumber.audio){
+			voiceNumber.audio = $("video");
+			if(voiceNumber.audio.length==0){
+				$("body").append("<video  controls=\"controls\"><source src=\"snd/0.wav\" type=\"audio/wav\"></video>");
+				voiceNumber.audio = $("video");
+			}
+
+		}
+
+		if(voiceNumber.task && voiceNumber.task.length>0){
+			// 正在播放
+			voiceNumber.audio.unbind("ended");
+			if(voiceNumber.audio.length>0){
+				voiceNumber.audio[0].pause();
+			}
+		}
+
+		voiceNumber.task	= [];
+		voiceNumber.current	= number;
+
+		function trimNumber(num) { 
+			if (!/^\d*(\.\d*)?$/.test(num)){
+				return ""+num; 
+			} 
+			var AA = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9"); 
+			var BB = new Array("", "十", "百", "千", "万", "亿", "点", ""); 
+			var a = ("" + num).replace(/(^0*)/g, "").split("."), k = 0, re = ""; 
+			for (var i = a[0].length - 1; i >= 0; i--) { 
+				switch (k) { 
+					case 0: re = BB[7] + re; break; 
+					case 4: 
+						if (!new RegExp("0{4}\\d{" + (a[0].length - i - 1) + "}$").test(a[0])) 
+							re = BB[4] + re; break; 
+					case 8: re = BB[5] + re; BB[7] = BB[5]; k = 0; break; 
+				} 
+				if (k % 4 == 2 && a[0].charAt(i + 2) != 0 && a[0].charAt(i + 1) == 0) 
+					re = AA[0] + re; 
+				if (a[0].charAt(i) != 0) 
+					re = AA[a[0].charAt(i)] + BB[k % 4] + re; k++; 
+			} 
+
+			//小数
+			if (a.length > 1){ 
+				re += BB[6]; 
+				for (var i = 0; i < a[1].length; i++)
+					re += AA[a[1].charAt(i)]; 
+			} 
+			return re+"元"; 
+		} 
+
+		function play(){
+			if(voiceNumber.task.length==0)
+				return;
+			if(voiceNumber.current!=number)
+				return;
+
+			var val = voiceNumber.task.shift();
+			var src = "";
+			switch(val){
+			case "0" : src = "snd/0.wav"; break;
+			case "1" : src = "snd/1.wav"; break;
+			case "2" : src = "snd/2.wav"; break;
+			case "3" : src = "snd/3.wav"; break;
+			case "4" : src = "snd/4.wav"; break;
+			case "5" : src = "snd/5.wav"; break;
+			case "6" : src = "snd/6.wav"; break;
+			case "7" : src = "snd/7.wav"; break;
+			case "8" : src = "snd/8.wav"; break;
+			case "9" : src = "snd/9.wav"; break;
+			case "十" : src = "snd/10.wav"; break;
+			case "点" : src = "snd/dian.wav"; break;
+			case "元" : src = "snd/yuan.wav"; break;
+			case "分" : src = "snd/fen.wav"; break;
+			case "百" : src = "snd/bai.wav"; break;
+			case "千" : src = "snd/qian.wav"; break;
+			case "万" : src = "snd/wan.wav"; break;
+			case "亿" : src = "snd/yyi.wav"; break;
+			}
+
+			voiceNumber.audio.attr("src",src);
+			if(voiceNumber.audio.length>0)
+				voiceNumber.audio[0].play().catch(function(){});
+		}
+
+
+		voiceNumber.task = trimNumber(number).split("");
+		voiceNumber.audio.on("ended",function(){
+			if(voiceNumber.current==number)play();
+		});	
+
+		play();
+	}
+
+	voiceNumber(123.09);
+	voiceNumber(123.09);
+	voiceNumber("2111123.09");
+
+
+//-->
+</script>
+
+ </body>
+</html>

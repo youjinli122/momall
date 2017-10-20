@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+    <!-- ##### 此行很重要 ##### -->
+    <meta name="runenv" content="lan">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+    <title>银汇支付-收款</title> 
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/fonts/iconfont.css">
+    <link rel="stylesheet" href="css/my-app.css">    
+</head>
+<body>
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<div class="views">
+  <div class="view view-main">    
+    
+    <div class="pages">
+  
+      <!--##############     登录 login #p-login    #################-->
+      <div data-page="p-login" class="page no-navbar navbar-through" id="p-login">
+        <div class="page-content">
+          <div class="re">
+              <img class="login-bj" src="img/login-bj.png" />
+              <i class="iconfont icon-logo_fuzhi- login-logo"></i>
+          </div>
+          <form class="mt20 list-block" onsubmit="return false;">
+              <div class="line-div clearfix">
+                  <label for="i-login-mobile">帐号</label>
+                  <input id="i-login-mobile" class="textbox" type="text" name="mobile" placeholder="请输入用户名" />
+              </div>
+              <div class="line-div clearfix">
+                  <label for="i-login-password">密码</label>
+                  <input id="i-login-password" class="textbox" type="password" name="password" placeholder="请输入密码" />
+              </div>
+              <div class="line-text clearfix">
+                  <a href="#p-forget-password" class="c-6">忘记密码?</a>
+              </div>
+              <div class="content-block">
+                <a class="button active submit-button">登录</a>
+              </div>
+              <div class="content-block">
+                <a class="button sub-button" href="#p-register">注册</a>
+              </div>
+          </form>
+        </div>
+      </div>
+
+      <!--##############     注册 #p-register    #################-->
+      <div data-page="p-register" class="page cached navbar-through" id="p-register">
+        <div class="navbar theme-white">
+          <div class="navbar-inner">
+            <div class="left"><a href="#" class="link icon-only back"><i class="icon icon-back"></i></a></div>
+            <div class="center sliding">注册</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <form class="mt20 list-block" onsubmit="return false;">
+              <div class="line-div clearfix">
+                  <label for="i-register-mobile">帐号</label>
+                  <input id="i-register-mobile" class="textbox" type="text" name="mobile" placeholder="请输入用户名" />
+              </div>
+              <div class="line-div clearfix">
+                  <label for="i-register-password1">密码</label>
+                  <input id="i-register-password1" class="textbox" type="password" name="password1" placeholder="请输入密码" />
+              </div>
+              <div class="line-div clearfix">
+                  <label for="i-register-password2">密码</label>
+                  <input id="i-register-password2" class="textbox" type="password" name="password2" placeholder="请再次输入密码" />
+              </div>
+              <div class="content-block">
+                <a class="button active submit-button">注册</a>
+              </div>
+          </form>
+        </div>
+      </div>
+
+      <!--##############     忘记密码 #p-forget-password    #################-->
+      <div data-page="p-forget-password" class="page  cached b-f0eff5 navbar-through" id="p-forget-password"> 
+        <div class="navbar theme-white">
+          <div class="navbar-inner">
+            <div class="left"><a href="#" class="link icon-only back"><i class="icon icon-back"></i></a></div>
+            <div class="center sliding">忘记密码</div>
+          </div>
+        </div>       
+        <div class="page-content">
+          <form class="list-block">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input re">
+                      <input type="text" placeholder="输入手机号" />
+                      <i class="iconfont icon-weibiaoti-_fuzhi-18 del fz16"></i>
+                    </div>                    
+                  </div>                  
+                </div>                
+              </li>              
+            </ul>
+            <p class="fz12 plr15 c-6">商户请输入商户号，收银员请输入手机号</p>
+            <div class="content-block">
+              <a class="button active submit-button" href="#p-isPhone">下一步</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!--##############     手机验证 #p-isPhone    #################-->
+      <div data-page="p-isPhone" class="page  cached b-f0eff5 navbar-through" id="p-isPhone">
+        <div class="navbar theme-white">
+          <div class="navbar-inner">
+            <div class="left"><a href="#" class="link icon-only back"><i class="icon icon-back"></i></a></div>
+            <div class="center sliding">手机验证</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <form class="list-block">
+            <p class="fz12 plr15 c-6">验证码已发送至手机：189****7266</p>
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <span class="wsn fz12 pr10">验证码</span>
+                    <div class="item-input">
+                      <input type="text" placeholder="请输入验证码" />                      
+                    </div>   
+                    <span class="wsn fz14 pl10 getCode">获取验证码</span>                 
+                  </div>                  
+                </div>                
+              </li>              
+            </ul>            
+            <div class="content-block">
+              <a class="button active submit-button" href="#p-reset-password">下一步</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--##############     重置密码 #p-reset-password    #################-->
+      <div data-page="p-reset-password" class="page  cached b-f0eff5 navbar-through" id="p-reset-password">
+        <div class="navbar theme-white">
+          <div class="navbar-inner">
+            <div class="left"><a href="#" class="link icon-only back"><i class="icon icon-back"></i></a></div>
+            <div class="center sliding">重置密码</div>
+          </div>
+        </div>
+        <div class="page-content">
+          <form class="list-block">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <span class="wsn fz12 pr10">输入密码</span>
+                    <div class="item-input">
+                      <input type="password" placeholder="请输入密码" />                      
+                    </div>                   
+                  </div>                  
+                </div>                
+              </li>    
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <span class="wsn fz12 pr10">确认密码</span>
+                    <div class="item-input">
+                      <input type="password" placeholder="请输入密码" />                      
+                    </div>                   
+                  </div>                  
+                </div>                
+              </li>                
+            </ul>            
+            <div class="content-block">
+              <a class="button active submit-button">完成</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--############     end    ################-->
+
+    </div>
+  </div>  
+</div>
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script src="js/pay.base.js"></script>
+<script src="js/pay.main.js"></script>
+<script>
+//----------------------------
+//      p-login  登录
+//----------------------------
+var pLogin = new function(){
+  $$("#p-login input[name=mobile]").val("13910238684");
+  $$("#p-login input[name=password]").val("123456");
+
+  CLICK("#p-login .submit-button",function(){
+    var mobile  = $$("#p-login input[name=mobile]").val();
+    var pass  = $$("#p-login input[name=password]").val();
+    if(mobile.length<6 || pass.length<6){
+      showMessage("用户名密码不正确");
+      return;
+    }
+    login(mobile,pass);  
+  });
+}
+
+/*PAGE_SHOW("#p-login",function(e){
+  if(isLogin()){
+    toPage("index.html");
+  }
+});*/
+
+//----------------------------
+//      p-register  注册
+//----------------------------
+//
+//
+PAGE_SHOW("#p-register",function(e){
+  var oMobile = $$("#p-register input[name=mobile]");
+  var oPass1 = $$("#p-register input[name=password1]");
+  var oPass2 = $$("#p-register input[name=password2]");
+
+  CLICK("#p-register .submit-button",function(){
+    if( oMobile.val().length < 11 ){
+      myApp.alert('密码错误');
+      oMobile.focus();
+      return;
+    }
+    if( !(/^1[34578]\d{9}$/.test($mobile.val())) ){
+      myApp.alert($mobile, '用户名只能输入手机号');                
+      oMobile.focus()
+      return;
+    }
+    if( oPass1.val()<6 || oPass2.val().length<6 ){
+      myApp.alert('密码错误');
+      return;
+    }
+  });
+});
+
+</script>
+</body>
+</html>
